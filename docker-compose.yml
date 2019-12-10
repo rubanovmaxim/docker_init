@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  app:
+    image: bookstore
+    build: .
+    links:
+      - database-server:database
+    environment:
+      - spring.datasource.url=jdbc:postgresql://medmap-db:5432/bookstore
+      - spring.datasource.username=postgres
+      - spring.datasource.password=admin
+    depends_on:
+      - database-server
+    ports:
+      - 8082:8082
+
+  database-server:
+    container_name: medmap-db
+    hostname: medmap-db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=bookstore
+    image: postgres:9.4
+    ports:
+      - 5432:5432
+    volumes:
+      - ./bookstore/src/main/resources:/docker-entrypoint-initdb.d
+
