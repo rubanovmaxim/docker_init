@@ -2,8 +2,7 @@ version: "3"
 
 services:
   app:
-    image: bookstore
-    build: .
+    image: maksru/bookstore:my
     links:
       - database-server:database
     environment:
@@ -22,9 +21,8 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=admin
       - POSTGRES_DB=bookstore
-    image: postgres:9.4
+    image: maksru/bookstore_db:my
     ports:
       - 5432:5432
     volumes:
-      - ./bookstore/src/main/resources:/docker-entrypoint-initdb.d
-
+       - ./sql:/docker-entrypoint-initdb.d
