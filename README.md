@@ -13,7 +13,8 @@
 
 Сборка и запуск проекта
 1. скачать этот репозиторий в любую папку.
-2. Запустить docker-compose up
+2. Запустить docker-compose pull
+3. Запустить docker-compose up
 
 после старта сервера:
  1. - http://localhost:8082/authentication
@@ -25,8 +26,12 @@
 
 если есть необходимость посмотреть исходники, то они находятся тут :
        https://github.com/rubanovmaxim/bookstore.git
+       
+
+![alt text](Architecture_v1.png)
 
 [Предваритеольная архитектура](Architecture_v1.png)
+
 [Диаграмма взаимодействий](BookStore.png)
 
 
