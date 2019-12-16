@@ -16,6 +16,6 @@
        https://github.com/rubanovmaxim/bookstore.git
 
 Диаграмма взаиможействий в файле BookStore.png  в корне этого проэкта.
-
+[диаграмма взаимодействий](BookStore.png)
 
 
