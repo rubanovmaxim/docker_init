@@ -12,9 +12,13 @@
 
 
 Сборка и запуск проекта
-1. скачать этот репозиторий в любую папку.
-2. Запустить docker-compose pull
-3. Запустить docker-compose up
+1. скачать этот репозиторий в любую папку
+  <b>git clone https://github.com/rubanovmaxim/bookstore.git</b>
+  начиная со второй домашки скачивать сооответствующую ветку
+  <b>git clone https://github.com/rubanovmaxim/bookstore.git -b homework_2</b>
+ где последняя цифра будет номером ДЗ.
+2. Запустить <b>docker-compose pull</b>
+3. Запустить <b>docker-compose up</b>
 
 после старта сервера:
  1. - http://localhost:8082/authentication
