@@ -17,8 +17,9 @@
   Начиная со второй домашки скачивать сооответствующую ветку : <br>
   <b>'git clone https://github.com/rubanovmaxim/docker_init.git -b homework_2'</b>,<br>
  где последняя цифра будет номером ДЗ.
-2. Запустить <b>docker-compose pull</b>
-3. Запустить <b>docker-compose up</b>
+2. Перейти в корень репозитория.
+3. Запустить <b>docker-compose pull</b>
+4. Запустить <b>docker-compose up</b>
 
 после старта сервера:
  1. - http://localhost:8082/authentication
