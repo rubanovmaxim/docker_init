@@ -13,7 +13,7 @@
 
 Сборка и запуск проекта
 1. скачать этот репозиторий в любую папку<br>
-  <b>'git clone https://github.com/rubanovmaxim/bookstore.git' .<br>
+  <b>'git clone https://github.com/rubanovmaxim/bookstore.git' .<br></b>
   Начиная со второй домашки скачивать сооответствующую ветку : <br>
   <b>'git clone https://github.com/rubanovmaxim/bookstore.git -b homework_2'</b>,<br>
  где последняя цифра будет номером ДЗ.
