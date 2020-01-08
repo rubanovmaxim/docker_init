@@ -12,8 +12,7 @@
 
 
 Сборка и запуск проекта
-1. скачать этот репозиторий в любую папку:
-<br><b>'git clone https://github.com/rubanovmaxim/docker_init.git -b homework_2' </b>.<br>
+1. скачать этот репозиторий в любую папку.
 2. Запустить docker-compose pull
 3. Запустить docker-compose up
 
