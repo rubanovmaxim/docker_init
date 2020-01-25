@@ -2,21 +2,35 @@ version: "3"
 
 services:
   app:
-    image: maksru/bookstore:hw_2
+    image: maksru/bookstore:hw_7
     links:
       - database-server:database
     environment:
-      - spring.datasource.url=jdbc:postgresql://medmap-db:5432/bookstore
+      - spring.datasource.url=jdbc:postgresql://bookstore-db:5432/bookstore
       - spring.datasource.username=postgres
       - spring.datasource.password=admin
+      - bookstore.cache.url=http://memory-cache:8083
     depends_on:
       - database-server
     ports:
       - 8082:8082
 
+  caching-service:
+    image: maksru/caching:hw_7
+    container_name: memory-cache
+    hostname: memory-cache
+    environment:
+      - spring.datasource.url=jdbc:postgresql://bookstore-db:5432/bookstore
+      - spring.datasource.username=postgres
+      - spring.datasource.password=admin
+    depends_on:
+      - database-server
+    ports:
+      - 8083:8083
+
   database-server:
-    container_name: medmap-db
-    hostname: medmap-db
+    container_name: bookstore-db
+    hostname: bookstore-db
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=admin
