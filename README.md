@@ -22,11 +22,15 @@
     login/password -  admin/admin
  2. - http://localhost:8082/swagger-ui.html
      работа с самими сервисами.
-     авторизация возможна пока что только для  admin/admin, хотя добавление пользователей работает.
+     авторизация возможна  для  admin/admin, или через  добавление нового пользователя 
+ 3.http://localhost:8083swagger-ui.html
+    рест апи для кеша
 
 
 если есть необходимость посмотреть исходники, то они находятся тут :
-       https://github.com/rubanovmaxim/bookstore.git
+       https://github.com/rubanovmaxim/bookstore.git ветка homework_7
+       для сервиса кеша 
+       https://github.com/rubanovmaxim/caching/tree/homework_7
        
 
 ![alt text](Architecture_v1.png)
