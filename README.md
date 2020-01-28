@@ -23,7 +23,7 @@
  2. - http://localhost:8082/swagger-ui.html
      работа с самими сервисами.
      авторизация возможна  для  admin/admin, или через  добавление нового пользователя 
- 3.http://localhost:8083swagger-ui.html
+ 3. http://localhost:8083swagger-ui.html
     рест апи для кеша
 
 
