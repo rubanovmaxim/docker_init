@@ -2,7 +2,7 @@ version: "3"
 
 services:
   app:
-    image: maksru/bookstore:hw_7
+    image: maksru/bookstore:hw_8
     links:
       - database-server:database
     environment:
@@ -10,13 +10,16 @@ services:
       - spring.datasource.username=postgres
       - spring.datasource.password=admin
       - bookstore.cache.url=http://memory-cache:8083
+      - nats.usl=nats://nats-messaging:4222
+      - nats.subject=notification
     depends_on:
       - database-server
+      - nats
     ports:
       - 8082:8082
 
   caching-service:
-    image: maksru/caching:hw_7
+    image: maksru/caching:hw_8
     container_name: memory-cache
     hostname: memory-cache
     environment:
@@ -27,6 +30,20 @@ services:
       - database-server
     ports:
       - 8083:8083
+
+  notification-service:
+    image: maksru/notification:hw_8
+    environment:
+      - spring.datasource.url=jdbc:postgresql://bookstore-db:5432/bookstore
+      - spring.datasource.username=postgres
+      - spring.datasource.password=admin
+      - nats.usl=nats://nats-messaging:4222
+      - nats.subject=notification
+    depends_on:
+      - database-server
+      - nats
+    ports:
+      - 8084:8084
 
   database-server:
     container_name: bookstore-db
@@ -40,3 +57,10 @@ services:
       - 5432:5432
     volumes:
        - ./sql:/docker-entrypoint-initdb.d
+
+  nats:
+    image: nats:alpine3.10
+    container_name: nats-messaging
+    hostname: nats-messaging
+    ports:
+      - 4222:4222
