@@ -19,7 +19,7 @@ services:
       - 8082:8082
 
   caching-service:
-    image: maksru/caching:hw_8
+    image: maksru/caching:hw_7
     container_name: memory-cache
     hostname: memory-cache
     environment:
