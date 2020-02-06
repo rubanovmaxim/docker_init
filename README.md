@@ -13,7 +13,7 @@
 
 Сборка и запуск проекта
 1. скачать этот репозиторий в любую папку<br>
-  <b>'git clone https://github.com/rubanovmaxim/docker_init.git -b homework_8' .<br></b>
+  <b>'git clone https://github.com/rubanovmaxim/docker_init.git -b homework_9' .<br></b>
 2. Перейти в корень репозитория.
 3. Запустить <b>docker-compose up</b>
 
@@ -29,13 +29,6 @@
  4. http://localhost:8084/swagger-ui.html
     рест апи сервиса уведомлений
 
-если есть необходимость посмотреть исходники, то они находятся тут :
-       https://github.com/rubanovmaxim/bookstore.git ветка homework_7
-       для сервиса кеша 
-       https://github.com/rubanovmaxim/caching/tree/homework_7
-       для сервиса уведомлений 
-       https://github.com/rubanovmaxim/notification/tree/homework_8
-       
 
 ![alt text](Architecture_v1.png)
 
