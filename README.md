@@ -18,16 +18,10 @@
 3. Запустить <b>docker-compose up</b>
 
 после старта сервера:
- 1. - http://localhost:8082/authentication
-    login/password -  admin/admin
- 2. - http://localhost:8082/swagger-ui.html
-     работа с самими сервисами.
-     авторизация возможна  для  admin/admin, или через  добавление нового пользователя 
- 3. http://localhost:8083/swagger-ui.html
-    рест апи для кеша
-
- 4. http://localhost:8084/swagger-ui.html
-    рест апи сервиса уведомлений
+ для просмотра grafana пройти по ссылке:
+ http://127.0.0.1:3000/
+ логин : admin
+ psaaword : pass
 
 
 ![alt text](Architecture_v1.png)
